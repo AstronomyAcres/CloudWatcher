@@ -8,7 +8,7 @@ distribution: setup.py CloudWatcher/*
 install:
 	apt -y update
 	apt -y install python3-serial python3-paho-mqtt
-	pip3 install .
+	pip3 install . --break-system-packages
 	cp -a etc/* /etc/
 
 clean:

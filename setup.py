@@ -8,7 +8,7 @@ setup(
     author='Michael J. Kidd',
     license='GPL-3.0',
     scripts=['CloudWatcher/cw2mqtt.py'],
-    packages=['cloudwatcher'],
+    packages=['CloudWatcher'],
     install_requires=[],
 
     classifiers=[
