@@ -1,0 +1,14 @@
+[Unit]
+Description=CloudWatcher MQTT Publisher
+
+[Service]
+Type=simple
+WorkingDirectory=/usr/local/bin
+EnvironmentFile=-/etc/default/cloudwatcher
+ExecStart=python3 /usr/local/bin/cw2mqtt.py $OPTS -i %i
+KillMode=process
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy=multi-user.target

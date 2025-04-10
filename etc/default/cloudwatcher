@@ -1,0 +1,19 @@
+# $ ./cw2mqtt.py --help
+# usage: cw2mqtt.py [-h] [-b BROKER] [-e ELEVATION] [-i INTERVAL] [-p PORT] [-r] [-t TOPIC]
+# 
+# options:
+#   -h, --help            show this help message and exit
+#   -b BROKER, --broker BROKER
+#                         MQTT Broker to publish to
+#   -e ELEVATION, --elevation ELEVATION
+#                         Elevation above Sea Level in Meters ( for relative atmospheric pressure
+#                         calculation )
+#   -i INTERVAL, --interval INTERVAL
+#                         MQTT update interval ( default 15 second )
+#   -p PORT, --port PORT  Comm port descriptor, e.g /dev/ttyUSB0 or COM1
+#   -r, --retain          MQTT Retain?
+#   -t TOPIC, --topic TOPIC
+#                         MQTT topic prefix
+#
+
+OPTS='-b localhost -i 15 -e 1222 -t cloudwatcher'
