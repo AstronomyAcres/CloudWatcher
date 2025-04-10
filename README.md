@@ -1,6 +1,19 @@
 # CloudWatcher
 Python code for sending Lunatico CloudWatcher data over MQTT
 
+# Why?
+There are a couple of other CloudWatcher python libraries available. However,
+each of them I tried either didn't work at all, or were so strict in their
+application of the protocol spec that they crashed at the first variation in
+response from the CloudWatcher device, whether that was due to communication
+error, or due to a different configuration from the original authors own unit.
+
+The approach of this library is to process the received bytes based on the 
+leading character of each block, and ignoring anything that is unexpected
+or unknown.  This approach, in my opinion, is especially critical since
+the CloudWatcher device may be responsible for the safety of your 
+( potentially expensive ) equipment.
+
 ## Syntax Help:
 ```
 usage: cw2mqtt.py [-h] [-b BROKER] [-e ELEVATION] [-i INTERVAL] [-p PORT] [-r] [-t TOPIC]
